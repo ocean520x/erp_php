@@ -1,0 +1,30 @@
+{
+    "name": "ocean/php-test-demo",
+    "authors": [
+        {
+            "name": "何子洋",
+            "email": "ocean_520x@hchow.icu"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "illuminate/routing": "9.x-dev",
+        "illuminate/container": "^9.52",
+        "illuminate/events": "^9.52",
+        "firebase/php-jwt": "dev-main",
+        "gregwar/captcha": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+          "Config\\": "config/",
+          "Library\\": "library/",
+          "Middleware\\": "middleware/",
+          "Model\\": "model/",
+          "App\\Admin\\": "modules/admin/",
+          "Router\\": "router/",
+          "Service\\": "service/",
+          "Task\\": "task/",
+          "Utils\\": "utils/"
+        }
+      }
+}
