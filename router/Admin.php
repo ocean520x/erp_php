@@ -45,6 +45,7 @@ class Admin{
       $router->post('erp_purchases_in/add', "ErpPurchasesIn@Add");
       $router->post('erp_purchases_in/edit', "ErpPurchasesIn@Edit");
       $router->post('erp_purchases_in/del', "ErpPurchasesIn@Del");
+      $router->post('erp_purchases_in/push', "ErpPurchasesIn@Push");
     });
   }
 }

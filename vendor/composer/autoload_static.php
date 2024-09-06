@@ -104,6 +104,7 @@ class ComposerStaticInit95ecfcf44609a18422d6cb8a353d01a6
         'D' => 
         array (
             'Doctrine\\Inflector\\' => 19,
+            'Data\\' => 5,
         ),
         'C' => 
         array (
@@ -304,6 +305,10 @@ class ComposerStaticInit95ecfcf44609a18422d6cb8a353d01a6
         'Doctrine\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
+        ),
+        'Data\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/data',
         ),
         'Config\\' => 
         array (

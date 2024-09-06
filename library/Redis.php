@@ -59,6 +59,17 @@ class Redis extends Base{
     return $this->conn->expire($key, $ttl);
   }
 
+  /* 列表（List）读取 */
+  function LRange($key, $start, $end): array {
+    if(!$this->conn) return [];
+    return $this->conn->lRange($key, $start, $end);
+  }
+
+  function LPop($key) {
+    if(!$this->conn) return null;
+    return $this->conn->lPop($key);
+  }
+
   /* 列表（List）写入 */
   function RPush(string $key, $val){
     if(!$this->conn) return;

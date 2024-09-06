@@ -63,6 +63,11 @@ class Model extends Base{
     $this->table = $table;
   }
 
+  /* 分区 */
+  function Partition(...$partition): void {
+    $this->table .= ' PARTITION(' .implode(',', $partition). ')';
+  }
+
   /* 关联-LEFT JOIN */
   function LeftJoin(string $table, string $on): void{
     $this->table .= ' LEFT JOIN ' .$table. ' ON ' .$on;
@@ -84,6 +89,24 @@ class Model extends Base{
     }
     $this->keys = implode(', ', $keys);
     $this->values = '(' . implode(', ', $vals) . ')';
+  }
+
+  /* 添加-多条 */
+  function ValuesAll(array $data){
+    list($keys, $vals, $alls) = [[], [], []];
+    $this->args = [];
+    foreach($data[0] as $k=>$v){
+      $keys[] = $k;
+      $vals[] = '?';
+    }
+    foreach($data as $i=>$v){
+      foreach($keys as $k){
+        $this->args[] = $data[$i][$k];
+      }
+      $alls[] = '(' . implode(', ', $vals) . ')';
+    }
+    $this->keys = implode(', ', $keys);
+    $this->values = implode(', ', $alls);
   }
 
   /* 添加-多条 */

@@ -52,6 +52,7 @@ return array(
     'Fruitcake\\Cors\\' => array($vendorDir . '/fruitcake/php-cors/src'),
     'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
     'Doctrine\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib/Doctrine/Inflector'),
+    'Data\\' => array($baseDir . '/data'),
     'Config\\' => array($baseDir . '/config'),
     'Carbon\\Doctrine\\' => array($vendorDir . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
